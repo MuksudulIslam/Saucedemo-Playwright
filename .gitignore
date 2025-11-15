@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# Playwright generated folders
+test-results/
+
+# Allure generated folders
+allure-results/
+allure-report/
+
+# Logs
+*.log
+*.txt
+
+# Environment files
+.env
+.env.*
+
+# IDE settings
+.vscode/
