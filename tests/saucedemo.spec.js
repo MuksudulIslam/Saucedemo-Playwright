@@ -13,21 +13,27 @@ test("1. User can login, 2.add a product to the cart, 3.verify the product from 
 
     // Go to login page first 
     await login.goto();
+    await page.waitForTimeout(500);
 
     // Login with valid credential
     await login.login("error_user", "secret_sauce");
+    await page.waitForTimeout(1000);
 
     // Add a product to the cart
     await inventory.addproductToCart();
+    await page.waitForTimeout(2000);
 
     // Go to the cart
     await inventory.openCart();
+    await page.waitForTimeout(2000);
 
     // Verify the product name
     const name = await cart.getProductName();
     expect(name).toContain("Sauce Labs Bike Light");
+    await page.waitForTimeout(1000);
 
     // Finally Logout from the system
     await logout.logout();
+    await page.waitForTimeout(1000);
 
 })

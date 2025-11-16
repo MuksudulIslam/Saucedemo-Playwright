@@ -10,6 +10,7 @@ class LogoutPage {
     async logout () {
 
         await this.page.click(this.menuButton);
+        await this.page.waitForTimeout(500);
         await this.page.click(this.logoutButton);
     }
 }

@@ -9,11 +9,13 @@ class InventoryPage {
 
     async addproductToCart () {
         await this.page.click(this.addToCartButton);
+        await this.page.waitForTimeout(500);
     }
 
     async openCart () {
 
         await this.page.click(this.cartIcon);
+        await this.page.waitForTimeout(500);
     }
 }
 

@@ -15,8 +15,11 @@ class LoginPage {
 
     async login(user, pass) {
         await this.page.fill(this.username, user);
+        await this.page.waitForTimeout(500);
         await this.page.fill(this.password, pass);
+        await this.page.waitForTimeout(500);
         await this.page.click(this.loginButton);
+        await this.page.waitForTimeout(1000);   
     }
 }
 
